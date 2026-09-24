@@ -52,6 +52,7 @@ class DiskApiLiveTest {
                 HttpResponse<String> cleanup = client.deletePermanently(root);
                 assertTrue(cleanup.statusCode() == 204 || cleanup.statusCode() == 202,
                         "Cleanup returned " + cleanup.statusCode() + ": " + cleanup.body());
+                awaitStatus(client, root, 404);
             }
         }
     }
