@@ -72,6 +72,18 @@ class DiskApiClientTest {
         assertRequest("DELETE", "/v1/disk/resources", "disk:/QA папка/copy", null, "true");
     }
 
+    @Test
+    void postPreservesUnicodeAndReservedCharactersInBothPaths() throws Exception {
+        String source = "disk:/QA тест/исходник + & # % ? =";
+        String destination = "disk:/QA тест/копия + & # % ? =";
+
+        var response = client.copyResource(source, destination);
+
+        assertEquals(201, response.statusCode());
+        assertRequest("POST", "/v1/disk/resources/copy", destination, source, null);
+        assertEquals(2, lastRequest.get().query().size(), "Path characters must not create extra query parameters");
+    }
+
     private void assertRequest(String method, String endpoint, String path, String from, String permanently) {
         ObservedRequest actual = lastRequest.get();
         assertEquals(method, actual.method());
