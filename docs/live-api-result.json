@@ -1,6 +1,6 @@
 {
-  "started_at_utc": "2026-09-26T15:31:46.236072+00:00",
-  "finished_at_utc": "2026-09-26T15:31:56.788123+00:00",
+  "started_at_utc": "2026-09-26T15:47:15.271943+00:00",
+  "finished_at_utc": "2026-09-26T15:47:27.349153+00:00",
   "api": "https://cloud-api.yandex.net",
   "preflight_status": 200,
   "maven_exit_code": 0,
@@ -9,19 +9,88 @@
   "suites": [
     {
       "name": "io.github.pepepoopoon.disk.DiskApiClientTest",
-      "tests": "4",
+      "tests": "5",
       "failures": "0",
       "errors": "0",
       "skipped": "0",
-      "time": "0.052"
+      "time": "0.05"
     },
     {
       "name": "io.github.pepepoopoon.disk.DiskApiLiveTest",
-      "tests": "1",
+      "tests": "6",
       "failures": "0",
       "errors": "0",
       "skipped": "0",
-      "time": "6.219"
+      "time": "9.114"
+    }
+  ],
+  "source_commit": "8aa04711396693eecafe1b23f49eddb4d5e31d44",
+  "testcases": [
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiClientTest",
+      "name": "deleteRemovesOnlyNamedResourcePermanently",
+      "time_seconds": 0.033,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiClientTest",
+      "name": "putCreatesFolder",
+      "time_seconds": 0.004,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiClientTest",
+      "name": "postCopiesResource",
+      "time_seconds": 0.003,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiClientTest",
+      "name": "getRequestsResourceMetadata",
+      "time_seconds": 0.003,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiClientTest",
+      "name": "postPreservesUnicodeAndReservedCharactersInBothPaths",
+      "time_seconds": 0.003,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiLiveTest",
+      "name": "deleteMissingResourceReturnsNotFound",
+      "time_seconds": 0.633,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiLiveTest",
+      "name": "duplicateFolderReturnsConflictAndKeepsOriginal",
+      "time_seconds": 1.754,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiLiveTest",
+      "name": "getWithInvalidTokenReturnsUnauthorized",
+      "time_seconds": 0.065,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiLiveTest",
+      "name": "copyMissingSourceReturnsNotFoundAndCreatesNothing",
+      "time_seconds": 2.03,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiLiveTest",
+      "name": "getMissingResourceReturnsNotFound",
+      "time_seconds": 0.322,
+      "result": "passed"
+    },
+    {
+      "class": "io.github.pepepoopoon.disk.DiskApiLiveTest",
+      "name": "createReadCopyAndDeleteFolders",
+      "time_seconds": 4.294,
+      "result": "passed"
     }
   ]
 }
