@@ -1,0 +1,27 @@
+{
+  "started_at_utc": "2026-09-26T15:31:46.236072+00:00",
+  "finished_at_utc": "2026-09-26T15:31:56.788123+00:00",
+  "api": "https://cloud-api.yandex.net",
+  "preflight_status": 200,
+  "maven_exit_code": 0,
+  "live_executed": true,
+  "redacted_report_files": 0,
+  "suites": [
+    {
+      "name": "io.github.pepepoopoon.disk.DiskApiClientTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.052"
+    },
+    {
+      "name": "io.github.pepepoopoon.disk.DiskApiLiveTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "6.219"
+    }
+  ]
+}
